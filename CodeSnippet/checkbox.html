@@ -1,0 +1,63 @@
+<html>
+<head>
+<style> 
+input[type=checkbox] {
+  display: none;
+}
+/* 
+- Style each label that is directly after the input
+- position: relative; will ensure that any position: absolute children will position themselves in relation to it
+*/
+
+input[type=checkbox] + label {
+  position: relative;
+  //background: url(http://i.stack.imgur.com/ocgp1.jpg) no-repeat;
+      background-color: #2f7b1c;
+  height: 20px;
+  width: 20px;
+  display: block;
+  border-radius: 50%;
+  transition: box-shadow 0.4s, border 0.4s;
+  border: solid 5px #FFF;
+  box-shadow: 0 0 1px #FFF;/* Soften the jagged edge */
+  cursor: pointer;
+}
+/* Provide a border when hovered and when the checkbox before it is checked */
+input[type=checkbox]:checked + label {
+ // border: solid 5px #F00;
+ // box-shadow: 0 0 1px #F00;
+  background-color: #da0505;
+  /* Soften the jagged edge */
+}
+input[type=checkbox] + label:hover{
+background-color: orange;
+}
+/* 
+- Create a pseudo element :after when checked and provide a tick
+- Center the content
+*/
+
+/* input[type=checkbox]:checked + label:after { */
+   
+/*   background-color: #da0505; */
+/*   /*content is required, though it can be empty - content: '';*/ */
+/*   height: 1em; */
+/*   position: absolute; */
+/*   top: 0; */
+/*   left: 0; */
+/*   bottom: 0; */
+/*   right: 0; */
+/*   margin: auto; */
+/*  // color: #F00; */
+/*   line-height: 1; */
+/*   font-size: 8px; */
+/*   text-align: center; */
+/* } */
+</style>
+</head>
+<body>
+ 
+			<input type="checkbox" value="None" id="roundedOne" name="check" checked /> <label for="roundedOne"></label>
+		 
+</body>
+</html>
